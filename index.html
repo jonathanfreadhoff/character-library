@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Library</title>
+    <script type="module" crossorigin src="./assets/index-B_OMagw4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B4QNsH6k.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Character Library</h1>
+      <p>Start with a story, then add the numbers.</p>
+    </header>
+
+    <main class="layout">
+      <form id="character-form" class="builder" novalidate>
+        <section class="card">
+          <h2>1. Story</h2>
+          <p class="hint">
+            Lock the traits you like, then reroll the rest. You can also edit any trait by hand, which locks it.
+          </p>
+          <label class="field">
+            Name
+            <input id="name" type="text" maxlength="80" autocomplete="off" />
+          </label>
+          <fieldset class="tone-picker">
+            <legend>Tone</legend>
+            <label><input type="radio" name="tone" value="grounded" checked /> Grounded fantasy</label>
+            <label><input type="radio" name="tone" value="strange" /> Strange</label>
+          </fieldset>
+          <div id="story-traits" class="traits"></div>
+          <button type="button" id="reroll" class="secondary">🎲 Reroll unlocked traits</button>
+        </section>
+
+        <section class="card">
+          <h2>2. D&amp;D 5e details</h2>
+          <p class="hint">Open a list to read each option, or press 🎲 for a random pick.</p>
+          <div id="dnd-actions" class="dnd-actions"></div>
+          <div id="pickers" class="pickers"></div>
+          <div id="ability-editor"></div>
+          <div id="combat-stats"></div>
+        </section>
+
+        <div id="form-errors" class="form-errors" role="alert"></div>
+        <div class="save-row">
+          <button type="submit" id="save">Save character</button>
+          <p id="save-status" class="save-status" role="status"></p>
+        </div>
+      </form>
+
+      <section class="card library-panel">
+        <h2>Library</h2>
+        <div id="library"></div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        Species, classes, and backgrounds are from the
+        <a href="https://www.dndbeyond.com/srd">System Reference Document 5.2.1</a> by Wizards of the Coast LLC,
+        licensed under <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY-4.0</a>. Feature
+        descriptions are paraphrased.
+      </p>
+    </footer>
+
+  </body>
+</html>
