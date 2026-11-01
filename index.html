@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Character Library</title>
-    <script type="module" crossorigin src="./assets/index-LYKT4wgf.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CBZDglCI.css">
+    <script type="module" crossorigin src="./assets/index-BmEJFuuc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-y8rEGYNV.css">
   </head>
   <body>
     <header class="page-header">
@@ -17,6 +17,14 @@
       <form id="character-form" class="builder" novalidate>
         <div id="editing-banner" class="editing-banner" role="status" hidden></div>
         <section class="card">
+          <fieldset id="system-picker" class="tone-picker system-picker">
+            <legend>Game system</legend>
+            <label><input type="radio" name="system" value="dnd5e" checked /> D&amp;D 5e</label>
+            <label><input type="radio" name="system" value="coc7e" /> Call of Cthulhu</label>
+          </fieldset>
+        </section>
+
+        <section class="card">
           <h2>1. Story</h2>
           <p class="hint">
             Lock the traits you like, then reroll the rest. You can also edit any trait by hand, which locks it.
@@ -27,7 +35,7 @@
           </label>
           <fieldset class="tone-picker">
             <legend>Tone</legend>
-            <label><input type="radio" name="tone" value="grounded" checked /> Grounded fantasy</label>
+            <label><input type="radio" name="tone" value="grounded" checked /> Grounded <span id="tone-setting">fantasy</span></label>
             <label><input type="radio" name="tone" value="strange" /> Strange</label>
           </fieldset>
           <div id="story-traits" class="traits"></div>
@@ -35,7 +43,7 @@
           <div id="character-look"></div>
         </section>
 
-        <section class="card">
+        <section id="dnd-section" class="card">
           <h2>2. D&amp;D 5e details</h2>
           <p class="hint">Open a list to read each option, or press 🎲 for a random pick.</p>
           <details class="new-to-dnd">
@@ -60,6 +68,12 @@
           <div id="spellcasting"></div>
         </section>
 
+        <section id="coc-section" class="card" hidden>
+          <h2>2. Call of Cthulhu details</h2>
+          <p class="hint">Investigators are ordinary people in the 1920s, using 7th Edition rules.</p>
+          <div id="investigator"></div>
+        </section>
+
         <div id="form-errors" class="form-errors" role="alert"></div>
         <div class="save-row">
           <button type="submit" id="save">Save character</button>
@@ -79,6 +93,10 @@
         <a href="https://www.dndbeyond.com/srd">System Reference Document 5.2.1</a> by Wizards of the Coast LLC,
         licensed under <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY-4.0</a>. Feature
         descriptions are paraphrased.
+      </p>
+      <p>
+        Call of Cthulhu is a trademark of Chaosium Inc. This app isn't affiliated with or endorsed by Chaosium, and its
+        investigator rules are summarized in the app's own words.
       </p>
     </footer>
 
