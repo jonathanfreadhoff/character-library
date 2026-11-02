@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Character Library</title>
-    <script type="module" crossorigin src="./assets/index-DNeY3CpW.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Di95XxwA.css">
+    <script type="module" crossorigin src="./assets/index-Bj9Ts-lu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DMtZb8rD.css">
   </head>
   <body>
     <header class="page-header">
@@ -21,6 +21,7 @@
             <legend>Game system</legend>
             <label><input type="radio" name="system" value="dnd5e" checked /> D&amp;D 5e</label>
             <label><input type="radio" name="system" value="coc7e" /> Call of Cthulhu</label>
+            <label><input type="radio" name="system" value="bitd" /> Blades in the Dark</label>
           </fieldset>
         </section>
 
@@ -85,6 +86,12 @@
           <div id="investigator"></div>
         </section>
 
+        <section id="blades-section" class="card" hidden>
+          <h2>2. Blades in the Dark details</h2>
+          <p class="hint">Scoundrels are daring criminals in the haunted industrial city of Doskvol.</p>
+          <div id="scoundrel"></div>
+        </section>
+
         <div id="form-errors" class="form-errors" role="alert"></div>
         <div class="save-row">
           <button type="submit" id="save">Save character</button>
@@ -108,6 +115,11 @@
       <p>
         Call of Cthulhu is a trademark of Chaosium Inc. This app isn't affiliated with or endorsed by Chaosium, and its
         investigator rules are summarized in the app's own words.
+      </p>
+      <p>
+        This work is based on <a href="https://bladesinthedark.com/">Blades in the Dark</a>, product of One Seven Design,
+        developed and authored by John Harper, and licensed for our use under the
+        <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported license</a>.
       </p>
     </footer>
 
