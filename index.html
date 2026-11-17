@@ -10,8 +10,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&display=swap"
     />
-    <script type="module" crossorigin src="./assets/index-C2BDIgyG.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C5kZlPzt.css">
+    <script type="module" crossorigin src="./assets/index-By8aW9qi.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CxxHQmNn.css">
   </head>
   <body>
     <header class="page-header">
@@ -30,6 +30,7 @@
             <label><input type="radio" name="system" value="bitd" /> Blades in the Dark</label>
             <label><input type="radio" name="system" value="drawsteel" /> Draw Steel</label>
             <label><input type="radio" name="system" value="pf2e" /> Pathfinder</label>
+            <label><input type="radio" name="system" value="free" /> Free (no game)</label>
           </fieldset>
           <label class="page-setting">
             Background
@@ -64,6 +65,10 @@
             <label><input type="radio" name="tone" value="grounded" checked /> Grounded <span id="tone-setting">fantasy</span></label>
             <label><input type="radio" name="tone" value="strange" /> Strange</label>
           </fieldset>
+          <label id="story-setting-field" class="field" hidden>
+            Setting for random traits
+            <select id="story-setting"></select>
+          </label>
           <div id="story-traits" class="traits"></div>
           <button type="button" id="reroll" class="secondary">🎲 Reroll unlocked traits</button>
           <div id="character-look"></div>
@@ -170,6 +175,15 @@
             </p>
           </details>
           <div id="pathfinder"></div>
+        </section>
+
+        <section id="free-section" class="card" hidden>
+          <h2>2. Story notes</h2>
+          <p class="hint">
+            No game rules, just the character: what their story is about, how they change, how they treat other people,
+            and the moments that carry them through a story.
+          </p>
+          <div id="free"></div>
         </section>
 
         <div id="form-errors" class="form-errors" role="alert"></div>
